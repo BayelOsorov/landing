@@ -1,0 +1,206 @@
+.nav-container {
+  background-color: $whiteBackg;
+  border: 1px solid #eeeef6;
+  border-radius: 87px;
+  width: 95%;
+  margin: 0 auto;
+}
+.nav-items {
+  padding: 0 10px;
+  margin: 8px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  li {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.about-btn {
+  padding: 20px 34px;
+  border-radius: 87px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.dowload-btn {
+  padding: 18px 20px;
+  border: 2px solid $blue;
+  border-radius: 87px;
+  background-color: $white;
+  color: $blue;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  img {
+    margin-left: 10px;
+  }
+  &:hover {
+    background-color: #fafaff;
+  }
+}
+.burger,
+.buttons {
+  display: none;
+}
+.nav-items-active {
+  display: none;
+}
+.nav-container {
+  @include for-tablet-landscape-only {
+    width: 100%;
+    .nav-items {
+      display: flex;
+      padding: 0 5px;
+      li {
+        font-size: 13px;
+      }
+      .about-btn {
+        padding: 15px 15px;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .dowload-btn {
+        padding: 8px 5px;
+        font-weight: 500;
+        font-size: 14px;
+        img {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  @include for-phone-only {
+    border-radius: 0%;
+    width: 100%;
+    .nav-items {
+      display: none;
+    }
+
+    .nav-items-active {
+      margin-top: 20px;
+      transition: 0.5s;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      li {
+        font-size: 13px;
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      margin-bottom: 10px;
+
+      .about-btn {
+        padding: 15px 15px;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .dowload-btn {
+        padding: 8px 5px;
+        font-weight: 500;
+        font-size: 14px;
+        img {
+          margin-left: 5px;
+        }
+      }
+    }
+    .burger {
+      left: 90%;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      &__active {
+        .burger__line {
+          height: 0;
+          transition: 0s;
+          &::before {
+            background: #000;
+            transform: rotate(-45deg);
+            top: 0;
+            transition: 0.3s;
+          }
+          &::after {
+            background: #000;
+            transform: rotate(45deg);
+            top: 0;
+            transition: 0.3s;
+          }
+        }
+      }
+      &__line {
+        width: 33.33px;
+        height: 3.33px;
+        background: black;
+        border-radius: 4px;
+        position: relative;
+        transition: 0.3s;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 33.33px;
+          height: 3.33px;
+          background: black;
+          border-radius: 4px;
+          top: -10px;
+          left: 0;
+          transition: 0.3s;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          width: 33.33px;
+          height: 3.33px;
+          background: black;
+          border-radius: 4px;
+          top: 10px;
+          left: 0;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  @include for-small-phone-only {
+    .nav-items-active {
+      margin-top: 20px;
+      transition: 0.5s;
+      display: block;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 10px;
+      }
+    }
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      .about-btn {
+        padding: 7px 7px;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .dowload-btn {
+        margin-top: 5px;
+        padding: 3px 5px;
+        font-weight: 500;
+        font-size: 14px;
+        img {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

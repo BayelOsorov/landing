@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+ul {
+  list-style-type: none;
+}
+
+@mixin for-small-phone-only {
+  @media (max-width: 630px) {
+    @content;
+  }
+}
+@mixin for-phone-only {
+  @media (max-width: 799px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-portait-only {
+  @media (min-width: 600px) and (max-width: 799px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 800px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin text($fw, $fz, $lh, $col) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  color: $col;
+}
+
+$black: #000;
+$white: #fff;
+$whiteBackg: #eeeef6;
+$blue: #3530fa;
+$grey: #747789;
+
+.container {
+  width: 95%;
+  //   max-width: 1440px;
+  margin: 0 auto;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    background-color: #2825de;
+    transition-duration: 0.5s;
+  }
+  &:active {
+    background-color: #1a18a5;
+  }
+}
+.store-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 6px 13px rgba(53, 48, 250, 0.35);
+  border-radius: 27px;
+  background-color: $blue;
+  color: $white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  width: 145px;
+  height: 65px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #2825de;
+    transition-duration: 0.5s;
+  }
+  &:active {
+    background-color: #1a18a5;
+  }
+  img {
+    margin-right: 7px;
+    width: 15% !important;
+  }
+}
+@import "./components/NavBar/style.scss";
+@import "./components/Header/style.scss";
+@import "./components/About/style.scss";
+@import "./components/HowToUse/style.scss";

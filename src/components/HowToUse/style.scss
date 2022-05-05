@@ -1,0 +1,61 @@
+.how-to-use {
+  margin-top: 100px;
+  background-color: $whiteBackg;
+  border-radius: 120px;
+  img {
+    object-fit: contain;
+  }
+  .how-to-use__items {
+    display: flex;
+    justify-content: space-evenly;
+    .how-to-use__item {
+      margin-top: 80px;
+      width: 60%;
+      margin-left: 100px;
+      h2 {
+        padding-bottom: 32px;
+        font-weight: 700;
+        font-size: 68px;
+        line-height: 105%;
+        color: $blue;
+      }
+      span {
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 130%;
+        color: $grey;
+      }
+    }
+  }
+  .send-passport {
+    margin-top: 54px;
+    border-radius: 120px;
+    background: #a565f5;
+    display: flex;
+    justify-content: space-evenly;
+    .send-passport-item {
+      padding-bottom: 94px;
+      width: 60%;
+      margin-left: 100px;
+
+      h2 {
+        padding-top: 64px;
+        padding-bottom: 32px;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 105%;
+        color: $white;
+      }
+      span {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 130%;
+        color: $white;
+      }
+    }
+    img {
+      padding-top: 130px;
+      width: 20%;
+    }
+  }
+}
