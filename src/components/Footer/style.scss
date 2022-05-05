@@ -1,0 +1,104 @@
+.footer {
+  background-color: #313131;
+  padding-top: 133px;
+  color: $white;
+  .our-app {
+    position: relative;
+    background: #d0f203;
+    border-radius: 100px;
+    padding: 50px;
+    min-height: 400px;
+    .our-app__iphone {
+      position: absolute;
+      right: 40px;
+      top: 50px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 120%;
+    }
+    strong {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+  .buttons {
+    display: flex;
+    padding-top: 45px;
+    justify-content: start;
+    button:first-child {
+      margin-right: 15px;
+    }
+  }
+  .footer-body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    padding-top: 120px;
+    padding-bottom: 55px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .footer-left {
+    margin-left: 13%;
+    top: 20%;
+    img {
+      margin-bottom: 20px;
+      width: 219px;
+      height: 63px;
+
+      display: block;
+    }
+  }
+  .footer-right {
+    display: flex;
+    justify-content: space-evenly;
+    ul {
+      li {
+        font-size: 23px;
+        line-height: 28px;
+        margin-top: 14px;
+      }
+    }
+  }
+  &__items {
+    display: flex;
+    // justify-content: flex-start;
+    padding-bottom: 57px;
+    padding-top: 150px;
+    align-items: center;
+    .footer__icons {
+      display: flex;
+      width: 450px;
+      justify-content: space-evenly;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .footer {
+    & img:first-child {
+      display: none !important;
+    }
+    & img:last-child {
+      display: none !important;
+    }
+    .footer-body {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
+@media screen and(max-width: 426px) {
+  .footer .footer-right ul {
+    font-weight: 400 !important;
+    li {
+      font-size: 10px !important;
+    }
+  }
+}

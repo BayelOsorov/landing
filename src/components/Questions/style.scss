@@ -1,0 +1,36 @@
+.question-title {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 85px;
+  text-transform: uppercase;
+}
+.questions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  .question {
+    width: 400px;
+    text-align: center;
+    margin-top: 84px;
+    h3 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 120%;
+      margin-bottom: 20px;
+    }
+    strong {
+      font-weight: 700;
+      font-size: 104px;
+      line-height: 100%;
+      color: $blue;
+    }
+  }
+  .special-question {
+    background: $blue;
+    padding: 4px 30px 20px;
+    color: $white !important;
+    border-radius: 48px;
+  }
+}
