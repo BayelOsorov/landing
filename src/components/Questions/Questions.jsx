@@ -38,7 +38,7 @@ const Questions = () => {
       <h2 id="questions" className="question-title">
         Часто задаваемые вопросы
       </h2>
-      <div className="container questions">
+      <div data-aos="fade-down" className="container questions">
         {questions?.map((item) => (
           <div key={item.id} className="question">
             <h3>{item.title}</h3>

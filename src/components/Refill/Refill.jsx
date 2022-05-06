@@ -37,7 +37,7 @@ const payments = [
 ];
 const Refill = () => {
   return (
-    <div id="refill" className="container refill">
+    <div data-aos="fade-down" id="refill" className="container refill">
       <h2>
         Где я могу пополнить <br /> кошелёк?
       </h2>

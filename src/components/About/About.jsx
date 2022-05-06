@@ -12,7 +12,7 @@ import "swiper/css";
 import Buttons from "../Buttons/Buttons";
 const About = () => {
   return (
-    <div id="about" className="about">
+    <div data-aos="fade-up" id="about" className="about">
       <div className="info">
         <img src={girl} alt="gitl with money" />
         <h1>
