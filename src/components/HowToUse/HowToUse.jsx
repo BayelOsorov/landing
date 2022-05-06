@@ -5,7 +5,7 @@ import hands from "../../assets/hands.png";
 
 const HowToUse = () => {
   return (
-    <div className="how-to-use container">
+    <div id="how-to-use" className="how-to-use container">
       <div className="how-to-use__items">
         <div className="how-to-use__item">
           <h2>

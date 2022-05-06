@@ -35,7 +35,9 @@ const questions = [
 const Questions = () => {
   return (
     <>
-      <h2 className="question-title">Часто задаваемые вопросы</h2>
+      <h2 id="questions" className="question-title">
+        Часто задаваемые вопросы
+      </h2>
       <div className="container questions">
         {questions?.map((item) => (
           <div key={item.id} className="question">

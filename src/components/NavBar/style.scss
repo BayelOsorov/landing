@@ -171,6 +171,9 @@
     }
   }
   @include for-small-phone-only {
+    .burger {
+      left: 85%;
+    }
     .nav-items-active {
       margin-top: 20px;
       transition: 0.5s;
@@ -201,6 +204,11 @@
           margin-left: 5px;
         }
       }
+    }
+  }
+  @include for-tablet-portait-only {
+    .burger {
+      left: 90%;
     }
   }
 }

@@ -53,7 +53,7 @@ const benefits = [
 ];
 const Benefits = () => {
   return (
-    <div className="benefits container">
+    <div id="benefits" className="benefits container">
       <h2>Преимущества</h2>
       <div className="cards">
         {benefits?.map((item) => (

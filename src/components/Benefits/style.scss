@@ -10,10 +10,10 @@
   }
   .cards {
     color: $white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    justify-items: center;
     .card {
       margin-top: 20px;
       width: 420px;
@@ -36,6 +36,35 @@
         display: block;
         margin-bottom: 36px;
       }
+    }
+  }
+  @include for-small-phone-only {
+    h2 {
+      font-size: 29px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .card {
+        margin-top: 20px;
+        width: 350px;
+        height: 360px;
+        padding: 20px;
+        strong {
+          font-size: 25px;
+        }
+        p {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+  @include for-tablet-portait-only-and-for-tablet-landscape-only {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
     }
   }
 }

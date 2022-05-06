@@ -1,8 +1,7 @@
 import React from "react";
 
 import iphone from "../../assets/iphoneMain.png";
-import ios from "../../assets/ios.png";
-import android from "../../assets/googlePlay.png";
+import Buttons from "../Buttons/Buttons";
 
 const Header = () => {
   return (
@@ -13,16 +12,7 @@ const Header = () => {
       <span>
         Доступно для <strong>iOS</strong> и <strong>Android</strong>
       </span>
-      <div className="buttons">
-        <button className="store-btn">
-          <img src={ios} alt="ios" />
-          IOS
-        </button>
-        <button className="store-btn">
-          <img src={android} alt="android" />
-          Android
-        </button>
-      </div>
+      <Buttons />
     </div>
   );
 };

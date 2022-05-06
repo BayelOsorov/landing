@@ -35,4 +35,18 @@
     justify-content: space-evenly;
     width: 347px;
   }
+  @include for-small-phone-only {
+    h1 {
+      font-size: 40px;
+    }
+    h6 {
+      font-size: 18px;
+    }
+    .iphone {
+      width: 50%;
+    }
+    .buttons {
+      width: auto;
+    }
+  }
 }

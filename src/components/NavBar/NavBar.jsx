@@ -5,7 +5,7 @@ import arrow from "../../assets/arrow.png";
 const NavBar = () => {
   const [isBurger, setIsBurger] = useState(false);
   return (
-    <div className="nav-container">
+    <div id="navbar" className="nav-container">
       <div
         className={`burger ${isBurger ? "burger__active" : ""}`}
         onClick={() => setIsBurger(!isBurger)}
@@ -14,34 +14,66 @@ const NavBar = () => {
       </div>
       {!isBurger ? (
         <ul className="nav-items">
-          <button className="about-btn btn">О приложении</button>
-          <li>Инструменты</li>
-          <li>Как пользоваться</li>
-          <li>Преймущества</li>
-          <li>Вопросы</li>
-          <li>Как пополнить</li>
-          <li>Конаткты</li>
-          <button className="dowload-btn btn">
-            Скачать
-            <img src={arrow} alt="arrow" />
-          </button>
-        </ul>
-      ) : (
-        <>
-          <ul className="nav-items nav-items-active">
-            <li>Инструменты</li>
-            <li>Как пользоваться</li>
-            <li>Преймущества</li>
-            <li>Вопросы</li>
-            <li>Как пополнить</li>
-            <li>Конаткты</li>
-          </ul>
-          <div className="buttons">
+          <a href="#benefits">
             <button className="about-btn btn">О приложении</button>
+          </a>
+          <li>
+            <a href="#about">Инструменты</a>
+          </li>
+          <li>
+            <a href="#how-to-use">Как пользоваться</a>
+          </li>
+          <li>
+            <a href="#benefits">Преимущества</a>
+          </li>
+          <li>
+            <a href="#questions">Вопросы</a>
+          </li>
+          <li>
+            <a href="#refill">Как пополнить</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакты</a>
+          </li>
+          <a href="#footer">
             <button className="dowload-btn btn">
               Скачать
               <img src={arrow} alt="arrow" />
             </button>
+          </a>
+        </ul>
+      ) : (
+        <>
+          <ul className="nav-items nav-items-active">
+            <li>
+              <a href="#about">Инструменты</a>
+            </li>
+            <li>
+              <a href="#how-to-use">Как пользоваться</a>
+            </li>
+            <li>
+              <a href="#benefits">Преимущества</a>
+            </li>
+            <li>
+              <a href="#questions">Вопросы</a>
+            </li>
+            <li>
+              <a href="#refill">Как пополнить</a>
+            </li>
+            <li>
+              <a href="#contacts">Контакты</a>
+            </li>
+          </ul>
+          <div className="buttons">
+            <a href="#benefits">
+              <button className="about-btn btn">О приложении</button>
+            </a>
+            <a href="#footer">
+              <button className="dowload-btn btn">
+                Скачать
+                <img src={arrow} alt="arrow" />
+              </button>
+            </a>
           </div>
         </>
       )}

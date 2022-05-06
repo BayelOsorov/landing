@@ -58,4 +58,98 @@
       width: 20%;
     }
   }
+  @include for-small-phone-only {
+    margin-top: 50px;
+    border-radius: 50px;
+    img {
+      width: 70%;
+    }
+    .how-to-use__items {
+      width: 100%;
+      display: block;
+      .how-to-use__item {
+        text-align: center;
+        margin-top: 0px;
+        width: 100%;
+        margin-left: 0px;
+        h2 {
+          padding-top: 50px;
+          font-size: 35px;
+        }
+        span {
+          font-size: 19px;
+        }
+      }
+    }
+    .send-passport {
+      border-radius: 50px;
+      margin-top: 0px;
+      display: block;
+      .send-passport-item {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding-bottom: 20px;
+        h2 {
+          padding-top: 50px;
+
+          font-size: 35px;
+        }
+        span {
+          font-size: 19px;
+        }
+      }
+      img {
+        padding-top: 0;
+        width: 40%;
+        margin-left: 50%;
+      }
+    }
+  }
+  @include for-tablet-portait-only {
+    margin-top: 50px;
+    border-radius: 100px;
+    img {
+      width: 30%;
+    }
+    .how-to-use__items {
+      display: block;
+      .how-to-use__item {
+        text-align: center;
+        margin-top: 0px;
+        width: 100%;
+        margin-left: 0px;
+        h2 {
+          padding-top: 50px;
+          font-size: 50px;
+        }
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+    .send-passport {
+      border-radius: 100px;
+      margin-top: 0px;
+      display: block;
+      .send-passport-item {
+        margin-left: 0;
+        text-align: center;
+        padding-bottom: 20px;
+        width: 100%;
+        h2 {
+          padding-top: 50px;
+          font-size: 50px;
+        }
+        span {
+          font-size: 22px;
+        }
+      }
+      img {
+        padding-top: 0;
+        width: 20%;
+        margin-left: 50%;
+      }
+    }
+  }
 }

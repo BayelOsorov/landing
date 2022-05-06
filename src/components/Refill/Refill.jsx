@@ -37,7 +37,7 @@ const payments = [
 ];
 const Refill = () => {
   return (
-    <div className="container refill">
+    <div id="refill" className="container refill">
       <h2>
         Где я могу пополнить <br /> кошелёк?
       </h2>
@@ -45,7 +45,7 @@ const Refill = () => {
       <img className="refill__image" src={girl} alt="girl think" />
       <div className="cards">
         {payments?.map((item) => (
-          <div className="card">
+          <div key={item.id} className="card">
             <img src={item.image} alt="payments" />
             <p>Терминал</p>
             <strong>{item.title}</strong>

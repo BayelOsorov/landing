@@ -11,9 +11,11 @@
 ul {
   list-style-type: none;
 }
-
+a {
+  color: unset;
+}
 @mixin for-small-phone-only {
-  @media (max-width: 630px) {
+  @media (max-width: 600px) {
     @content;
   }
 }
@@ -29,7 +31,12 @@ ul {
   }
 }
 @mixin for-tablet-portait-only {
-  @media (min-width: 600px) and (max-width: 799px) {
+  @media (min-width: 601px) and (max-width: 799px) {
+    @content;
+  }
+}
+@mixin for-tablet-portait-only-and-for-tablet-landscape-only {
+  @media (min-width: 601px) and (max-width: 1200px) {
     @content;
   }
 }
@@ -110,6 +117,10 @@ $grey: #747789;
   height: 65px;
   border: none;
   cursor: pointer;
+  @include for-small-phone-only {
+    width: 130px;
+    height: 55px;
+  }
   &:hover {
     background-color: #2825de;
     transition-duration: 0.5s;
