@@ -26,11 +26,11 @@ const About = () => {
         <Swiper
           modules={[Autoplay]}
           autoplay={{
-            delay: 4000,
+            delay: 4500,
+            pauseOnMouseEnter: false,
             disableOnInteraction: false,
           }}
           spaceBetween={50}
-          onSlideChange={() => console.log("slide change")}
           slidesPerView={1}
         >
           <SwiperSlide>

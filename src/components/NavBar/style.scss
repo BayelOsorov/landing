@@ -4,6 +4,9 @@
   border-radius: 87px;
   width: 95%;
   margin: 0 auto;
+  @include for-phone-only {
+    background-color: unset;
+  }
 }
 .nav-items {
   padding: 0 10px;

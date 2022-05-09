@@ -2,12 +2,12 @@ import React, { Suspense, lazy } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// import Home from "./pages/Home";
-import NotFound from "./components/NotFound/NotFound";
+import Home from "./pages/Home";
+import Preloader from "./components/Preloader/Preloader";
 
 import "./app.scss";
-import Preloader from "./components/Preloader/Preloader";
-const Home = lazy(() => import("./pages/Home"));
+
+const NotFound = lazy(() => import("./components/NotFound/NotFound"));
 function App() {
   return (
     <Suspense fallback={<Preloader />}>
