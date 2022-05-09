@@ -1,6 +1,8 @@
 import React from "react";
 
+import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import girl from "../../assets/girl-with-money.png";
 
 import card from "../../assets/cards/itemcard.png";
@@ -10,6 +12,7 @@ import card4 from "../../assets/cards/itemcard5.png";
 
 import "swiper/css";
 import Buttons from "../Buttons/Buttons";
+
 const About = () => {
   return (
     <div data-aos="fade-up" id="about" className="about">
@@ -20,7 +23,16 @@ const About = () => {
         </h1>
       </div>
       <div className="my-swiper">
-        <Swiper spaceBetween={50} slidesPerView={1}>
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          spaceBetween={50}
+          onSlideChange={() => console.log("slide change")}
+          slidesPerView={1}
+        >
           <SwiperSlide>
             <div className="about-item">
               <img className="about-image" src={card} alt="" />
