@@ -16,7 +16,7 @@ import Buttons from "../Buttons/Buttons";
 const Footer = () => {
   return (
     <div id="footer" className="footer">
-      <div className="our-app">
+      <div data-aos="zoom-in-down" className="our-app container">
         <h2>Скачайте наше приложение</h2>
         <strong>Будьте всегда при деньгах</strong>
         <Buttons />

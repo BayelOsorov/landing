@@ -33,6 +33,12 @@
     button:first-child {
       margin-right: 15px;
     }
+    @media (max-width: 330px) {
+      button:first-child {
+        margin-right: 0;
+      }
+      justify-content: space-evenly;
+    }
   }
   .footer-body {
     display: grid;
