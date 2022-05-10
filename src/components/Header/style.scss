@@ -36,6 +36,7 @@
     width: 347px;
   }
   @include for-small-phone-only {
+    margin-top: 70px;
     h1 {
       font-size: 35px;
     }

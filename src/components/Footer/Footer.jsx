@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense, useState } from "react";
 
 import iphone from "../../assets/iphone2.png";
 import logo from "../../assets/Logologo.svg";
@@ -13,7 +13,16 @@ import ok from "../../assets/social-links/OKsocial-link.png";
 import whatsapp from "../../assets/social-links/WhatsApp_whitesocial-link.png";
 import Buttons from "../Buttons/Buttons";
 
+import { Modal } from "react-responsive-modal";
+import "react-responsive-modal/styles.css";
+import Preloader from "../Preloader/Preloader";
+// import Issue from "../ModalSections/Issue/Issue";
+const Issue = lazy(() => import("../ModalSections/Issue/Issue"));
 const Footer = () => {
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
   return (
     <div id="footer" className="footer">
       <div data-aos="zoom-in-down" className="our-app container">
@@ -31,11 +40,16 @@ const Footer = () => {
             <strong>Всегда при деньгах</strong>
           </div>
           <div className="footer-right">
+            <Modal open={open} onClose={onCloseModal} center>
+              <Suspense fallback={<Preloader />}>
+                <Issue />
+              </Suspense>
+            </Modal>
             <ul>
               <li>О приложении</li>
               <li>Продукты</li>
               <li>Условия</li>
-              <li>Как получить</li>
+              <li onClick={onOpenModal}>Как получить</li>
             </ul>
             <ul>
               <li>Как оплачивать</li>
@@ -43,7 +57,7 @@ const Footer = () => {
               <li>Партнеры</li>
               <li>Помощь</li>
             </ul>
-            <ul>
+            <ul id="contacts">
               Контакты:
               <a href="tel:+996772553333">
                 <li>+996 772 55 33 33</li>

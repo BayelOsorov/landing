@@ -1,0 +1,130 @@
+@mixin text($fw, $fz, $lh, $col) {
+  font-weight: $fw;
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  color: $col;
+}
+.issue {
+  padding: 50px 0 58px;
+  &__row {
+    display: flex;
+    column-gap: 24px;
+    flex-wrap: wrap;
+  }
+  &__card {
+    width: calc(33% - 16px);
+    &-num {
+      @include text(900, 110px, 160px, #48b3ab);
+    }
+    &-title {
+      @include text(bold, 35px, 48px, #141414);
+      margin: 16px 0;
+    }
+    &-text {
+      @include text(normal, 18px, 28px, #000);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .issue {
+    padding: 90px 0 90px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .issue {
+    padding: 70px 0 70px;
+    .title {
+      margin-bottom: 60px !important;
+    }
+  }
+  .issue__card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 116px auto;
+    column-gap: 20px;
+    align-items: center;
+  }
+  .issue__card-img {
+    width: 116px;
+  }
+
+  .issue__card-title {
+    font-size: 37px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .issue__card-title {
+    font-size: 33px;
+  }
+}
+@media (max-width: 820px) {
+  .issue {
+    padding: 60px 0 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .issue__card-num {
+    @include text(900, 120px, 120px, #48b3ab);
+  }
+  .issue__card {
+    grid-template-columns: 80px auto;
+  }
+  .issue__card-title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .issue {
+    padding: 50px 0 50px;
+  }
+  .issue__row {
+    row-gap: 15px;
+  }
+  .issue__card-title {
+    font-size: 22px;
+  }
+  .issue__card-text {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .issue .title {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .issue {
+    padding: 40px 0;
+  }
+  .issue__row {
+    row-gap: 24px;
+  }
+  .issue__card {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+
+    &-num {
+      font-size: 64px;
+      line-height: 64px;
+      margin-bottom: 16px;
+    }
+    &-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &-text {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import NavBar from "../components/NavBar/NavBar";
 import Header from "../components/Header/Header";
@@ -9,14 +9,8 @@ import Questions from "../components/Questions/Questions";
 import Refill from "../components/Refill/Refill";
 import Footer from "../components/Footer/Footer";
 
-import AOS from "aos";
 import "swiper/css";
-import "aos/dist/aos.css";
-
 const Home = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <>
       <NavBar />

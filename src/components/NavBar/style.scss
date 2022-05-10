@@ -20,6 +20,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    &:hover {
+      color: $blue;
+      transition-duration: 0.1s;
+    }
   }
 }
 .about-btn {

@@ -12,49 +12,50 @@ import card4 from "../../assets/cards/itemcard5.png";
 
 import "swiper/css";
 import Buttons from "../Buttons/Buttons";
-
 const About = () => {
   return (
-    <div data-aos="fade-up" id="about" className="about">
-      <div className="info">
-        <img src={girl} alt="gitl with money" />
-        <h1>
-          Разные <br /> инструменты для <br /> разных целей
-        </h1>
-      </div>
-      <div className="my-swiper">
-        <Swiper
-          modules={[Autoplay]}
-          autoplay={{
-            delay: 4500,
-            pauseOnMouseEnter: false,
-            disableOnInteraction: false,
-          }}
-          spaceBetween={50}
-          slidesPerView={1}
-        >
-          <SwiperSlide>
-            <div className="about-item">
-              <img className="about-image" src={card} alt="" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="about-item">
-              <img className="about-image" src={card2} alt="" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="about-item">
-              <img className="about-image" src={card3} alt="" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="about-item-last">
-              <img className="about-image-last" src={card4} alt="" />
-              <Buttons />
-            </div>
-          </SwiperSlide>
-        </Swiper>
+    <div className="about-block">
+      <div data-aos="fade-up" id="about" className="about container">
+        <div className="info">
+          <img src={girl} alt="gitl with money" />
+          <h1>
+            Разные <br /> инструменты для <br /> разных целей
+          </h1>
+        </div>
+        <div className="my-swiper">
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 4500,
+              pauseOnMouseEnter: false,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={50}
+            slidesPerView={1}
+          >
+            <SwiperSlide>
+              <div className="about-item">
+                <img className="about-image" src={card} alt="" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="about-item">
+                <img className="about-image" src={card2} alt="" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="about-item">
+                <img className="about-image" src={card3} alt="" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="about-item-last">
+                <img className="about-image-last" src={card4} alt="" />
+                <Buttons />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );
